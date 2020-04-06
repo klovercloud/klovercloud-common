@@ -1,0 +1,31 @@
+group 'com.klovercloud.common'
+version '0.1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+pluginBundle {
+    website = 'https://www.klovercloud.io/'
+    vcsUrl = 'https://github.com/gradle/greeting-plugin-example'
+    tags = ['example', 'template']
+}
+
+gradlePlugin {
+    plugins {
+        greetingsPlugin {
+            id = 'org.example.greeting'
+            displayName = 'Greeting Plugin'
+            description = 'Template for people to start their own plugin adventure'
+            implementationClass = 'org.example.greeting.GreetingPlugin'
+        }
+    }
+}
