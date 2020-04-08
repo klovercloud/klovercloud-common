@@ -1,6 +1,8 @@
 package io.klovercloud.common.type;
 
-public class EncryptedKafkaMessage {
+import java.io.Serializable;
+
+public class EncryptedKafkaMessage implements Serializable {
 
     private byte[] encryptedSecretKey;
     private byte[] encryptedPayload;
